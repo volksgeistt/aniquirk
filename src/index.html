@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniQuirk</title>
+    <meta name="site-image" content="bannerco.jpg">
+    <meta property="og:image" content="bannerco.jpg">
+    <meta name="name" content="AniQuirk">
+    <meta name="description" content="AniQuirk, find info about trending, latest and your favorite anime at one place.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:wght@400;500;600;700&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <div class="logo-circle"></div>
+                    <div class="logo-mask"></div>
+                </div>
+                <h1>Ani<span>Quirk</span></h1>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="SEARCH FOR AN ANIME...">
+                <button id="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            
+            <div class="nav-buttons">
+                <button id="show-watchlist" class="nav-btn">
+                    <i class="fas fa-bookmark"></i>
+                    <span>WATCHLIST</span>
+                </button>
+                <button id="show-seasonal" class="nav-btn">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>SEASONAL</span>
+                </button>
+            </div>
+        </header>
+
+        <main>
+            <div class="hero-banner" id="hero-banner">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h2>Discover Your Next Favorite Anime</h2>
+                    <p>Explore the vast world of anime with our comprehensive collection</p>
+                    <button id="explore-btn" class="hero-btn">
+                        <i class="fas fa-compass"></i> EXPLORE NOW
+                    </button>
+                </div>
+            </div>
+
+            <div class="content-header">
+                <div id="trending-heading" class="section-title">
+                    <h2>TRENDING NOW</h2>
+                    <div class="title-bar"></div>
+                </div>
+                
+                <div id="results-heading" class="section-title hidden">
+                    <h2>SEARCH RESULTS</h2>
+                    <div class="title-bar"></div>
+                </div>
+                
+                <div id="watchlist-heading" class="section-title hidden">
+                    <h2>MY WATCHLIST</h2>
+                    <div class="title-bar"></div>
+                </div>
+                
+                <div id="seasonal-heading" class="section-title hidden">
+                    <h2>THIS SEASON</h2>
+                    <div class="title-bar"></div>
+                </div>
+                
+                <div class="view-controls" id="view-controls">
+                    <button id="back-to-trending" class="control-btn hidden">
+                        <i class="fas fa-arrow-left"></i> BACK
+                    </button>
+                    <div class="filter-controls">
+                        <button id="filter-all" class="filter-btn active">ALL</button>
+                        <button id="filter-tv" class="filter-btn">TV</button>
+                        <button id="filter-movie" class="filter-btn">MOVIES</button>
+                        <button id="filter-ova" class="filter-btn">OVA</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="anime-container" class="anime-grid"></div>
+            <div id="watchlist-container" class="anime-grid hidden"></div>
+            <div id="seasonal-container" class="anime-grid hidden"></div>
+            <div id="search-container" class="anime-grid hidden"></div>
+            <div id="anime-details" class="hidden"></div>
+            
+            <div id="loading" class="hidden">
+                <div class="spinner-container">
+                    <div class="spinner-outer"></div>
+                    <div class="spinner-inner"></div>
+                </div>
+                <p>LOADING DATA</p>
+            </div>
+            
+            <div id="no-results" class="hidden">
+                <i class="fas fa-dragon"></i>
+            </div>
+        </main>
+
+        <div id="anime-modal" class="modal">
+            <div class="modal-backdrop"></div>
+            <div class="modal-content">
+                <button class="close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div id="modal-content"></div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made By<a href="https://github.com/volksgeistt" target="_blank"> Ujjawal Singh</a></p>
+            <p class="footer-tag">&lt;AniQuirk/&gt; - Your Gateway to Anime World.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
